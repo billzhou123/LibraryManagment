@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.billzhou.librarymanagement.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="com.billzhou.librarymanagement.Perspective"
+            id="com.billzhou.librarymanagement.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="Borrow and Return"
+            allowMultiple="true"
+            icon="icons/borrowreturn.ico"
+            class="com.billzhou.librarymanagement.BorrowAndReturnView"
+            id="com.billzhou.librarymanagement.borrowandreturnview">
+      </view>
+      <view
+            name="Library Administrator"
+            allowMultiple="true"
+            icon="icons/admin.ico"
+            class="com.billzhou.librarymanagement.LibAdminView"
+            id="com.billzhou.librarymanagement.libadminview">
+      </view>
+            <view
+            name="Report Compilation"
+            allowMultiple="true"
+            icon="icons/report.ico"
+            class="com.billzhou.librarymanagement.ReportsView"
+            id="com.billzhou.librarymanagement.reportsview">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Mail"
+            id="com.billzhou.librarymanagement.category">
+      </category>
+      <command
+            name="Open Mailbox"
+            description="Opens a mailbox"
+            categoryId="com.billzhou.librarymanagement.category"
+            id="com.billzhou.librarymanagement.open">
+      </command>
+      <command
+            name="Open Message Dialog"
+            description="Open a message dialog"
+            categoryId="com.billzhou.librarymanagement.category"
+            id="com.billzhou.librarymanagement.openMessage">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.billzhou.librarymanagement.open"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="CTRL+2">
+      </key>
+      <key
+            commandId="com.billzhou.librarymanagement.openMessage"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="CTRL+3">
+      </key>
+      <key
+            commandId="org.eclipse.ui.file.exit"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="CTRL+X">
+      </key>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.billzhou.librarymanagement.application"
+            name="Library Mannagement">
+         <property
+               name="aboutText"
+               value="Library Mannagement created by Bill Zhou">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/sample2.ico">
+         </property>
+         <property
+               name="aboutImage"
+               value="product_lg.ico">
+         </property>
+         <property
+               name="appName"
+               value="Library Mannagement">
+         </property>
+      </product>
+   </extension>
+
+</plugin>

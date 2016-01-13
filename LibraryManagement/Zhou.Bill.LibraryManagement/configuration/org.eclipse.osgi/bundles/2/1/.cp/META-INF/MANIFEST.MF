@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.co
+ re.databinding,org.eclipse.core.databinding.beans,org.eclipse.core.da
+ tabinding.observable,org.eclipse.core.databinding.property,org.eclips
+ e.jface.databinding,com.ibm.icu
+Bundle-Vendor: BILLZHOU
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: lib/com.hexapixel.articles.paperclips.core.jar,lib/c
+ om.hexapixel.articles.paperclips.data.jar,lib/icons.jar,lib/net.sf.pa
+ perclips_1.0.4.200908120926.jar,lib/net.sf.paperclips.ui_1.0.4.200908
+ 120926.jar,.
+Bundle-Version: 1.0.0.201202052219
+Bundle-Name: Librarymanagement
+Bundle-Activator: com.billzhou.librarymanagement.Activator
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: com.billzhou.librarymanagement; singleton:=true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+
